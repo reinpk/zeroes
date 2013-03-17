@@ -23,6 +23,12 @@ zeroes([2, 2]); // returns [ [0, 0], [0, 0] ]
 zeroes([2, 2, 2]); // returns [ [ [0, 0], [0, 0] ], [ [0, 0], [0, 0] ]
 ```
 
+You can also pass in an alternate initial value, if you desire:
+```js
+zeroes(3, 1); // returns [1, 1, 1]
+zeroes(3, { a : 1 }); // returns [{ a : 1 }, { a : 1 }, { a : 1 }]
+```
+
 ## License
 
 MIT
