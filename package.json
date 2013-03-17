@@ -1,0 +1,15 @@
+{
+  "name": "zeroes-reinpk",
+  "version": "0.0.1",
+  "description": "Zeroes array utility",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "component": {
+    "scripts": {
+      "zeroes/index.js": "index.js"
+    }
+  }
+}
