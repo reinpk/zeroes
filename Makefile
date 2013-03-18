@@ -12,4 +12,6 @@ test:
 		--reporter spec \
 		--require should
 
+release: clean build test
+
 .PHONY: clean test
