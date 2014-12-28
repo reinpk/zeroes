@@ -30,4 +30,14 @@ describe('zeroes(dimensions)', function () {
   it('should allow alternate initial value objects', function () {
     zeroes(4, { a : 1 }).should.eql([{ a : 1 }, { a : 1 }, { a : 1 }, { a : 1 }]);
   });
+
+  it('should allow alternate values created by a function', function () {
+    var x = 0;
+
+    function value() {
+      return ++x;
+    }
+
+    zeroes(5, value).should.eql([ 1, 2, 3, 4, 5 ]);
+  });
 });

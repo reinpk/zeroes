@@ -17,7 +17,11 @@ function zeroes (dimensions, initialValue) {
   if (typeof dimensions === 'number') {
     array = new Array(dimensions);
     for (var i = 0; i < dimensions; i += 1) {
-      array[i] = initialValue;
+      if (typeof initialValue === 'function') {
+        array[i] = initialValue();
+      } else {
+        array[i] = initialValue;
+      }
     }
   }
   // else create an array of one-dimension-less arrays full of zeroes
