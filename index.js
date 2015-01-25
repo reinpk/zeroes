@@ -28,7 +28,7 @@ function zeroes (dimensions, initialValue) {
   else {
     array = new Array(dimensions[0]);
     for (var j = 0; j < dimensions[0]; j += 1) {
-      array[j] = zeroes(dimensions.slice(1));
+      array[j] = zeroes(dimensions.slice(1), initialValue);
     }
   }
   return array;

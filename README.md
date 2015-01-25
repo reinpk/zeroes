@@ -24,9 +24,16 @@ zeroes([2, 2, 2]); // returns [ [ [0, 0], [0, 0] ], [ [0, 0], [0, 0] ]
 ```
 
 You can also pass in an alternate initial value, if you desire:
+
 ```js
 zeroes(3, 1); // returns [1, 1, 1]
 zeroes(3, { a : 1 }); // returns [{ a : 1 }, { a : 1 }, { a : 1 }]
+```
+
+A function can also be used for the initial value:
+
+```js
+zeroes(2, Math.random) // returns [ 0.7462011112365872, 0.05772261111997068 ]
 ```
 
 

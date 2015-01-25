@@ -40,4 +40,20 @@ describe('zeroes(dimensions)', function () {
 
     zeroes(5, value).should.eql([ 1, 2, 3, 4, 5 ]);
   });
+
+  it('should even set a custom initialValue with a matrix', function () {
+    zeroes([ 2, 2 ], 'x').should.eql([
+      ['x', 'x'],
+      ['x', 'x']
+    ]);
+  })
+
+  it('should use a custom fn initialValue with a matrix', function () {
+    zeroes([ 2, 2 ], function () {
+      return 'hello'
+    }).should.eql([
+      ['hello', 'hello'],
+      ['hello', 'hello']
+    ]);
+  });
 });
