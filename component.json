@@ -1,7 +1,7 @@
 {
   "name": "zeroes",
   "repo": "reinpk/zeroes",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Create an array dynamically by specifying dimensions",
   "license": "MIT",
   "keywords": ["array", "fill", "zeroes", "utility"],
