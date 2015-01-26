@@ -1,9 +1,8 @@
 {
-  "name": "zeroes-reinpk",
+  "name": "zeroes",
   "version": "0.0.2",
   "license": "MIT",
-  "description": "Zeroes array utility",
-  "dependencies": {},
+  "description": "Create an array dynamically by specifying dimensions",
   "devDependencies": {
     "mocha": "*",
     "should": "*"
