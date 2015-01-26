@@ -30,10 +30,19 @@ zeroes(3, 1); // returns [1, 1, 1]
 zeroes(3, { a : 1 }); // returns [{ a : 1 }, { a : 1 }, { a : 1 }]
 ```
 
-A function can also be used for the initial value:
+A function can also be used for the `initialValue`, it will receive the
+coordinates as arguments. (the number of args will match the number of
+numbers supplied as `dimensions`)
 
 ```js
-zeroes(2, Math.random) // returns [ 0.7462011112365872, 0.05772261111997068 ]
+zeroes([ 2, 2 ], function (x, y) {
+  return String.fromCharCode(97 + x) + (y + 1);
+});
+
+// [
+//   [ 'a1', 'a2' ],
+//   [ 'b1', 'b2' ]
+// ]
 ```
 
 
