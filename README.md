@@ -24,9 +24,25 @@ zeroes([2, 2, 2]); // returns [ [ [0, 0], [0, 0] ], [ [0, 0], [0, 0] ]
 ```
 
 You can also pass in an alternate initial value, if you desire:
+
 ```js
 zeroes(3, 1); // returns [1, 1, 1]
 zeroes(3, { a : 1 }); // returns [{ a : 1 }, { a : 1 }, { a : 1 }]
+```
+
+A function can also be used for the `initialValue`, it will receive the
+coordinates as arguments. (the number of args will match the number of
+numbers supplied as `dimensions`)
+
+```js
+zeroes([ 2, 2 ], function (x, y) {
+  return String.fromCharCode(97 + x) + (y + 1);
+});
+
+// [
+//   [ 'a1', 'a2' ],
+//   [ 'b1', 'b2' ]
+// ]
 ```
 
 

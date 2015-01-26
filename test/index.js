@@ -40,4 +40,33 @@ describe('zeroes(dimensions)', function () {
 
     zeroes(5, value).should.eql([ 1, 2, 3, 4, 5 ]);
   });
+
+  it('should even set a custom initialValue with a matrix', function () {
+    zeroes([ 2, 2 ], 'x').should.eql([
+      ['x', 'x'],
+      ['x', 'x']
+    ]);
+  })
+
+  it('should use a custom fn initialValue with a matrix', function () {
+    var array = zeroes([ 2, 2 ], function () {
+      return 'hello'
+    });
+
+    array.should.eql([
+      ['hello', 'hello'],
+      ['hello', 'hello']
+    ]);
+  });
+
+  it('should pass the index(es) to an fn initialValue', function () {
+    var array = zeroes([ 2, 3 ], function (x, y) {
+      return String.fromCharCode(97 + x) + (y + 1);
+    });
+
+    array.should.eql([
+      ['a1', 'a2', 'a3'],
+      ['b1', 'b2', 'b3']
+    ]);
+  });
 });

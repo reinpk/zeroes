@@ -1,13 +1,9 @@
 {
   "name": "zeroes",
   "repo": "reinpk/zeroes",
-  "description": "Array zeroes utility",
   "version": "0.0.2",
+  "description": "Create an array dynamically by specifying dimensions",
   "license": "MIT",
-  "keywords": ["array", "zeroes", "utility"],
-  "dependencies": {},
-  "development": {},
-  "scripts": [
-    "index.js"
-  ]
+  "keywords": ["array", "fill", "zeroes", "utility"],
+  "scripts": ["index.js"]
 }
